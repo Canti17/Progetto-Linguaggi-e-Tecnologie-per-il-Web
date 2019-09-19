@@ -1,0 +1,156 @@
+html,body{
+    margin:0;
+    padding:0;
+    color: #000000;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 24px;
+    line-height:22px;
+    background-image: url(pay.jpg);
+    background-size: 180%;
+}
+
+h1,h2{
+    font-family:oswald;
+    text-transform:uppercase;
+    font-weight: bold;
+}
+
+a{text-decoration:none;}
+
+a:hover{color:#333;}
+
+
+
+/**************************** MODIFICA CAMPI *******************************/
+
+h1{
+    font-size: 55px;
+}
+
+
+
+main td {     /*IMPORTANTE SIA DEL MAIN ALTRIMENTI NELL? HEADER SI CREA UNA PROPORZIONE SBAGLIATA (chiedere a Canti)*/
+    font-size: 25px;
+    padding: 14px 16px;
+}
+
+
+.campoFisso{
+    padding-left: 24%;
+    padding-right: 25px;
+}
+
+#tabellaCampi {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 30px;
+    margin-top: 3%;
+    border-radius: 16px;
+    box-shadow:0 0 8px rgba(0,0,0,0.5);
+
+    border-collapse: separate;
+    border-spacing: 5px;
+
+    background-color: rgb(227, 223, 226);
+    /*background-color: rgb(255, 210, 50);*/
+}
+/*#EDE555*/
+
+hr{
+    background-color: black;
+    color: black;
+}
+
+
+#delete{
+    background-color: black;
+    color: white;
+    border-color: black;
+    width: 200px;
+    height: 30px;
+}
+
+#mod_pass{
+    background-image: url("ImmagineMatita.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18px;
+    width: 18px;
+}
+
+/*#mod_user{
+    background-image: url("ImmagineMatita.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18px;
+    width: 18px;
+}*/
+
+#mod_tel{
+    background-image: url("ImmagineMatita.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18px;
+    width: 18px;
+}
+
+#mod_avatar {
+    background-image: url("ImmagineMatita.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18px;
+    width: 18px;
+}
+
+#titolo{
+    font-family: Stencil;
+    font-size: 40px;
+    margin: 20px;
+    padding-bottom: 0px;
+}
+
+/*******************Gestione Avatar****************************/
+#avatar1{
+    background-image: url("Avatar1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(227, 223, 226);
+    height: 50px;
+    width: 50px;
+    border-color: transparent;
+}
+#avatar2{
+    background-image: url("Avatar2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(227, 223, 226);
+    height: 50px;
+    width: 50px;
+    border-color: transparent;
+}
+#avatar3{
+    background-image: url("Avatar3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(227, 223, 226);
+    height: 50px;
+    width: 50px;
+    border-color: transparent;
+}
+#avatar4 {
+    background-image: url("Avatar4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(227, 223, 226);
+    height: 50px;
+    width: 50px;
+    border-color: transparent;
+}

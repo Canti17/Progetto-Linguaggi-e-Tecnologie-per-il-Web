@@ -1,0 +1,239 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="Navigation%20Bar%20CSS.css">
+	<script type = "text/javascript" language = "javascript" src = "CodiceProgetto.js"></script>
+	<script type = "text/javascript" language = "javascript" src = "GestioneLogOut.js"></script>
+	<script type = "text/javascript" language = "javascript" src = "GestioneDB.js"></script>
+	<link rel="stylesheet" href="Progetto.css">
+	<!--<link rel="stylesheet" href="Navigation%20Bar%20CSS.css">-->
+
+
+</head>
+
+
+<body onload ="Setta_Credito();"">
+<header>
+<div id = "barra">
+	<ul>
+
+		<li><a href="Play.html">Gioca</a></li>
+		<li><a href="ProfiloUtente.html">Profilo</a></li>
+		<li><a href="StatisticheGioco.html">Statistiche</a></li>
+		<li class="dropdown">
+			<a href="#profilo" class="dropbutton">Regolamento</a>
+			<div class="dropdown-content">
+				<a href="ComeGiocare.html">ComeGiocare</a>
+				<a href="TabVincite.html">Incasso Vincite</a>
+			</div>
+		</li>
+		<li><a href="TabContatti.html">Chi Siamo</a></li>
+		<li class="dropdown" id = "rightbut">
+			<div id = "profilo"><container id = "usern" ></container><img  id = "logout" class="dropbutton"></div>
+			<div class="dropdown-content-about">
+				<a id = "logbut" href="..\NotLoggedIn\LogIn.html" onclick="logOut();">Logout</a>
+			</div>
+		</li>
+	</ul>
+</div>
+</header>
+
+<main>
+	<form name = "registro" method = "post" action = "" onReset = "Resetta();">
+		<div id="global">
+		<div id = "menu">
+			<img src="logo.png" align="center" id = "logo">
+			<table class = "select-gold" >
+				<th>Men&ugrave</th>
+				<tr class="select-tr">
+					<td class="td-select" >
+						<div id = "credito"></div>
+					</td>
+				</tr>
+				<tr class="select-tr">
+					<td class="td-select">
+						<div class = "num">Seleziona puntata:
+							<select name="puntata" size=1 id="puntata" onchange = "return selectPuntata();">
+								<option selected value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr class="select-tr">
+					<td class="td-select">
+						<div class = "num">Quanti numeri:
+						<select name="nmax" size=1 id="nmax" onchange = "return selectMax();">
+							<option selected value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+						</div>
+					</td>
+				</tr>
+				<tr class="select-tr">
+					<td class="td-select">
+						Gioca il gold: <input type="checkbox" name="gold" id = "gold" onchange="checkGold()" disabled>
+						<br><testo style="font-size: 10px">(Dopo aver scelto i numeri)</testo>
+					</td>
+				</tr>
+			</table>
+			<table class="button-table">
+				<tbody>
+				<tr>
+					<td class="btns"><input type = "button" id = "invia" onclick = "estraiNumeri()"></td>
+					<td class="btns"><input type = "reset" id = "reset" value = ""></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id = "main-container">
+			<h3 align="center" style="margin-top: 10%"> Scegli qui i tuoi numeri!</h3>
+			<h5 align="center"> Clicca sul numero per inserirlo tra i numeri da te scelti</h5>
+			<table id="numeri">
+				<tbody>
+				<tr>
+					<td><input class="b" type="button" value="01" onclick="return getNum('1');"></td>
+					<td><input class="b" type="button" value="02" onclick="return getNum('2');"></td>
+					<td><input class="b" type="button" value="03" onclick="return getNum('3');"></td>
+					<td><input class="b" type="button" value="04" onclick="return getNum('4');"></td>
+					<td><input class="b" type="button" value="05" onclick="return getNum('5');"></td>
+					<td><input class="b" type="button" value="06" onclick="return getNum('6');"></td>
+					<td><input class="b" type="button" value="07" onclick="return getNum('7');"></td>
+					<td><input class="b" type="button" value="08" onclick="return getNum('8');"></td>
+					<td><input class="b" type="button" value="09" onclick="return getNum('9');"></td>
+					<td><input class="b" type="button" value="10" onclick="return getNum('10');"></td>
+				</tr>
+				<tr class="odd">
+					<td class="td"><input class="c" type="button" value="11" onclick="return getNum('11');"></td>
+					<td class="td"><input class="c" type="button" value="12" onclick="return getNum('12');"></td>
+					<td class="td"><input class="c" type="button" value="13" onclick="return getNum('13');"></td>
+					<td class="td"><input class="c" type="button" value="14" onclick="return getNum('14');"></td>
+					<td class="td"><input class="c" type="button" value="15" onclick="return getNum('15');"></td>
+					<td class="td"><input class="c" type="button" value="16" onclick="return getNum('16');"></td>
+					<td class="td"><input class="c" type="button" value="17" onclick="return getNum('17');"></td>
+					<td class="td"><input class="c" type="button" value="18" onclick="return getNum('18');"></td>
+					<td class="td"><input class="c" type="button" value="19" onclick="return getNum('19');"></td>
+					<td class="td"><input class="c" type="button" value="20" onclick="return getNum('20');"></td>
+				</tr>
+				<tr>
+					<td><input class="b" type="button" value="21" onclick="return getNum('21');"></td>
+					<td><input class="b" type="button" value="22" onclick="return getNum('22');"></td>
+					<td><input class="b" type="button" value="23" onclick="return getNum('23');"></td>
+					<td><input class="b" type="button" value="24" onclick="return getNum('24');"></td>
+					<td><input class="b" type="button" value="25" onclick="return getNum('25');"></td>
+					<td><input class="b" type="button" value="26" onclick="return getNum('26');"></td>
+					<td><input class="b" type="button" value="27" onclick="return getNum('27');"></td>
+					<td><input class="b" type="button" value="28" onclick="return getNum('28');"></td>
+					<td><input class="b" type="button" value="29" onclick="return getNum('29');"></td>
+					<td><input class="b" type="button" value="30" onclick="return getNum('30');"></td>
+				</tr>
+				<tr class="odd">
+					<td><input class="c" type="button" value="31" onclick="return getNum('31');"></td>
+					<td><input class="c" type="button" value="32" onclick="return getNum('32');"></td>
+					<td><input class="c" type="button" value="33" onclick="return getNum('33');"></td>
+					<td><input class="c" type="button" value="34" onclick="return getNum('34');"></td>
+					<td><input class="c" type="button" value="35" onclick="return getNum('35');"></td>
+					<td><input class="c" type="button" value="36" onclick="return getNum('36');"></td>
+					<td><input class="c" type="button" value="37" onclick="return getNum('37');"></td>
+					<td><input class="c" type="button" value="38" onclick="return getNum('38');"></td>
+					<td><input class="c" type="button" value="39" onclick="return getNum('39');"></td>
+					<td><input class="c" type="button" value="40" onclick="return getNum('40');"></td>
+				</tr>
+				<tr>
+					<td><input class="b" type="button" value="41" onclick="return getNum('41');"></td>
+					<td><input class="b" type="button" value="42" onclick="return getNum('42');"></td>
+					<td><input class="b" type="button" value="43" onclick="return getNum('43');"></td>
+					<td><input class="b" type="button" value="44" onclick="return getNum('44');"></td>
+					<td><input class="b" type="button" value="45" onclick="return getNum('45');"></td>
+					<td><input class="b" type="button" value="46" onclick="return getNum('46');"></td>
+					<td><input class="b" type="button" value="47" onclick="return getNum('47');"></td>
+					<td><input class="b" type="button" value="48" onclick="return getNum('48');"></td>
+					<td><input class="b" type="button" value="49" onclick="return getNum('49');"></td>
+					<td><input class="b" type="button" value="50" onclick="return getNum('50');"></td>
+				</tr>
+				<tr class="odd">
+					<td><input class="c" type="button" value="51" onclick="return getNum('51');"></td>
+					<td><input class="c" type="button" value="52" onclick="return getNum('52');"></td>
+					<td><input class="c" type="button" value="53" onclick="return getNum('53');"></td>
+					<td><input class="c" type="button" value="54" onclick="return getNum('54');"></td>
+					<td><input class="c" type="button" value="55" onclick="return getNum('55');"></td>
+					<td><input class="c" type="button" value="56" onclick="return getNum('56');"></td>
+					<td><input class="c" type="button" value="57" onclick="return getNum('57');"></td>
+					<td><input class="c" type="button" value="58" onclick="return getNum('58');"></td>
+					<td><input class="c" type="button" value="59" onclick="return getNum('59');"></td>
+					<td><input class="c" type="button" value="60" onclick="return getNum('60');"></td>
+				</tr>
+				<tr>
+					<td><input class="b" type="button" value="61" onclick="return getNum('61');"></td>
+					<td><input class="b" type="button" value="62" onclick="return getNum('62');"></td>
+					<td><input class="b" type="button" value="63" onclick="return getNum('63');"></td>
+					<td><input class="b" type="button" value="64" onclick="return getNum('64');"></td>
+					<td><input class="b" type="button" value="65" onclick="return getNum('65');"></td>
+					<td><input class="b" type="button" value="66" onclick="return getNum('66');"></td>
+					<td><input class="b" type="button" value="67" onclick="return getNum('67');"></td>
+					<td><input class="b" type="button" value="68" onclick="return getNum('68');"></td>
+					<td><input class="b" type="button" value="69" onclick="return getNum('69');"></td>
+					<td><input class="b" type="button" value="70" onclick="return getNum('70');"></td>
+				</tr>
+				<tr class="odd">
+					<td><input class="c" type="button" value="71" onclick="return getNum('71');"></td>
+					<td><input class="c" type="button" value="72" onclick="return getNum('72');"></td>
+					<td><input class="c" type="button" value="73" onclick="return getNum('73');"></td>
+					<td><input class="c" type="button" value="74" onclick="return getNum('74');"></td>
+					<td><input class="c" type="button" value="75" onclick="return getNum('75');"></td>
+					<td><input class="c" type="button" value="76" onclick="return getNum('76');"></td>
+					<td><input class="c" type="button" value="77" onclick="return getNum('77');"></td>
+					<td><input class="c" type="button" value="78" onclick="return getNum('78');"></td>
+					<td><input class="c" type="button" value="79" onclick="return getNum('79');"></td>
+					<td><input class="c" type="button" value="80" onclick="return getNum('80');"></td>
+				</tr>
+				<tr>
+					<td><input class="b" type="button" value="81" onclick="return getNum('81');"></td>
+					<td><input class="b" type="button" value="82" onclick="return getNum('82');"></td>
+					<td><input class="b" type="button" value="83" onclick="return getNum('83');"></td>
+					<td><input class="b" type="button" value="84" onclick="return getNum('84');"></td>
+					<td><input class="b" type="button" value="85" onclick="return getNum('85');"></td>
+					<td><input class="b" type="button" value="86" onclick="return getNum('86');"></td>
+					<td><input class="b" type="button" value="87" onclick="return getNum('87');"></td>
+					<td><input class="b" type="button" value="88" onclick="return getNum('88');"></td>
+					<td><input class="b" type="button" value="89" onclick="return getNum('89');"></td>
+					<td><input class="b" type="button" value="90" onclick="return getNum('90');"></td>
+				</tr>
+				</tbody>
+			</table>
+
+			<div id="vistaInseriti" align="left"></div>
+			<div id="vistaEstratti" align="right"></div>
+			<br>
+			<div id="vistaCheck" align="left"></div>
+
+
+		</div>
+		</div>
+	<br>
+</form>
+
+<div id="vistaVincitori"></div>
+
+</main>
+
+	<div id="sotto" align="center">
+	<a href="Avvertenze.html"> Avvertenze</a> |
+	<a href="Privacy.html"> Privacy</a> |
+	<a href="FormFeedback.html">Valuta il Sito</a>
+
+
+	</div>
+
+</body>
+</html>

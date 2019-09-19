@@ -1,0 +1,62 @@
+html,body{height: 100%;
+   color: #000000;font-family: "Helvetica Neue", sans-serif;font-size: 24px;
+   line-height:22px;
+   background-image: url(pay.jpg);
+   background-size: 180%;}
+
+h1,h2{font-family:oswald;text-transform:uppercase;font-weight:normal;font-weight: bold;}
+
+
+a:hover{color:#333;}
+
+#tabStats{
+    margin: 0 auto;
+    width: 60%;
+    font-size: 30px;
+    background-color: rgb(208, 209, 211);
+    border-radius: 16px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 1150px;
+}
+
+#tabStats td{
+    padding: 8px;
+    background-color: #e6ab4a;
+    border-color: #3d67af;
+    border: 1px solid;
+}
+
+#frequenti{
+    margin-left: 12%;
+}
+
+#ritardatari{
+    margin-left: 12%;
+    margin-top: 5%;
+}
+
+#statsgioco{
+    margin-left: 12%;
+    margin-top: 5%;
+}
+
+#percvincite{
+    margin-left: 28%;
+}
+
+#campioni{
+    margin-top: 5%;
+    margin-left: 12%;
+}
+
+#tcampioni{
+    margin-left: 28%;
+}
+
+h1{
+    font-size: 50px;
+}
+
+/**************************** MODIFICA CAMPI *******************************/
+

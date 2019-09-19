@@ -1,0 +1,151 @@
+
+html,body{
+    margin:0;
+    padding:0;
+    font-family: "Helvetica Neue", sans-serif;
+    background-image: url("pay.jpg");
+    line-height:22px;
+    font-size: 20px;
+    background-size: 180%;
+}
+
+#log{
+    margin-top: 10%;
+}
+
+#form{
+    background-color: #e6ab4a;
+    width: 30%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 10%;
+    border-radius: 5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin-left: 0;
+}
+
+input[type = "password"], input[type = "text"]{
+    border-color: #1456a0;
+}
+
+#invia{
+    margin-top: 2%;
+    width: 120px;
+    height: 44px;
+    border-color: #1456a0;
+    background-position: center;
+    background-image: url("Login.png");
+}
+
+#reset {
+    margin-top: 2%;
+    width: 75px;
+    height: 30px;
+    border-color: #1456a0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("Reset.jpg");
+}
+
+#sign-in{
+    margin-top: 3%;
+    width: 117px;
+    height: 44px;
+    border-color: #1456a0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("Sign In.jpg");
+}
+  body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+
+
+#right-part{
+    float:right;
+    width: 60%;
+    background-color: rgb(227, 223, 226);
+    border-left: 1px solid black ;
+
+}
+
+table td{
+    background-color: #e3dfe2;
+}
+
+#overlay{
+    background: rgba(0, 0, 0, 0.87);
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:100;
+    cursor:pointer;
+}
+
+#img1, #img2, #img3{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#imgov1{
+    display:none;
+    z-index:+300;       /*specifica quanto è in evidenza un elemento*/
+    position:absolute;
+    left: 10%;
+    top:12%;
+}
+#imgov2{
+    display:none;
+    z-index:+300;       /*specifica quanto è in evidenza un elemento*/
+    position:absolute;
+    left:32%; top:10%;
+    margin-top: 10%;
+}
+
+#imgov3{
+    display:none;
+    z-index:+300;       /*specifica quanto è in evidenza un elemento*/
+    position:absolute;
+    left:30%;
+    margin-top:10%;
+}
+
+#ul-login{
+    height: 500px;
+    overflow: scroll;
+    background-color: #e3dfe2;
+    margin-left: 1%;
+}
+
+#screen{
+    background-color: rgb(227, 223, 226);
+    border-left:1px solid black ;
+}
+
+#global{
+    border: 2px solid black;
+    width: 95%;
+    margin-left: 2%;
+    background-color: #e6ab4a;
+    overflow: hidden;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 2%;
+}
+
+/* Gestione Stelline */
+
+
+
+stelle li.on
+{
+    background-image: url('star-on.jpeg');
+}
+
+a{text-decoration: none;}

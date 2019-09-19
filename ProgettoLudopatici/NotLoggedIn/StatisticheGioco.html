@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Statistiche Gioco</title>
+        <link rel="stylesheet" type="text/css" href="StatisticheGioco.css">
+        <link rel="stylesheet" type="text/css" href="Navigation%20Bar%20CSS.css">
+        <script src="jquery-1.10.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="GestioneStatistiche.js"></script>
+        <script type = "text/javascript" language = "javascript" src = "GestioneDB.js"></script>
+</head>
+
+<body>
+
+
+
+    <!--NAVIGATIOBAR-->
+    <div id="barra">
+        <ul>
+            <li><a href="LogIn.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#profilo" class="dropbutton">Regolamento</a>
+                <div class="dropdown-content">
+                    <a href="ComeGiocare.html">ComeGiocare</a>
+                    <a href="TabVincite.html">Incasso Vincite</a>
+                </div>
+            </li>
+            <li><a href="StatisticheGioco.html">Statistiche</a></li>
+            <li><a href="TabContatti.html">Chi Siamo</a></li>
+        </ul>
+    </div>
+
+    <div id = "tabStats">
+        <br><br>
+        <h1 align="center" style="color: #1456a0">Statistiche di gioco</h1>
+        <div id = "frequenti"></div>
+        <div id = "ritardatari"></div>
+        <div id = "statsgioco">
+            <h3 style="color: #1456a0">Stats gioco</h3>
+            <table align = 'center' id = "percvincite" cellpadding='0px' cellspacing='0px'>
+            </table>
+        </div>
+        <div id = "campioni"></div>
+    </div>
+
+
+<div id="sotto" align="center">
+<a href="Avvertenze.html">Avvertenze</a> |
+<a href="Privacy.html"> Privacy</a>
+
+</div>
+
+</body>
+
+
+</html>

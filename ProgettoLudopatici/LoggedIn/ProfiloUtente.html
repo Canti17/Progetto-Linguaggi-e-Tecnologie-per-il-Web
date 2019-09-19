@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Profilo</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="ProfiloUtente.css">
+	<link rel="stylesheet" type="text/css" href="Navigation%20Bar%20CSS.css">
+	<script src="jquery-1.10.2.js"></script>
+	<script type="text/javascript" language="JavaScript" src="GestioneProfiloUtente.js"></script>
+	<script type="text/javascript" language="JavaScript" src="CodiceProgetto.js"></script>
+	<script type="text/javascript" language="JavaScript" src="GestioneDB.js"></script>
+	<script type="text/javascript" language="JavaScript" src="GestioneLogOut.js"></script>
+</head>
+
+<body onload="Setta_Profilo();">
+
+<header>
+	<div id = "barra">
+		<ul>
+
+			<li><a href="Play.html">Gioca</a></li>
+			<li><a href="ProfiloUtente.html">Profilo</a></li>
+			<li><a href="StatisticheGioco.html">Statistiche</a></li>
+			<li class="dropdown">
+				<a href="#profilo" class="dropbutton">Regolamento</a>
+				<div class="dropdown-content">
+					<a href="ComeGiocare.html">ComeGiocare</a>
+					<a href="TabVincite.html">Incasso Vincite</a>
+				</div>
+			</li>
+			<li><a href="TabContatti.html">Chi Siamo</a></li>
+			<li class="dropdown" id = "rightbut">
+				<div id = "profilo"><container id = "usern" ></container><img  id = "logout" class="dropbutton"></div>
+				<div class="dropdown-content-about">
+					<a id = "logbut" href="..\NotLoggedIn\LogIn.html" onclick="logOut()">Logout</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+</header>
+
+<main>
+	<table cellspacing="30" id="tabellaCampi">
+		<tr>
+			<td align="center" colspan="2" id="titolo">Profilo</td>
+		</tr>
+		<tr>
+			<td align="center" colspan="2">
+				<containerProfilo id="avatar"></containerProfilo>
+				<input type="button" id="mod_avatar" value="">
+
+				<input name="avatar1" type="button" value="" id="avatar1" onclick="modificaAvatar(name);" hidden>
+				<input name="avatar2" type="button" value="" id="avatar2" onclick="modificaAvatar(name);" hidden>
+				<input name="avatar3" type="button" value="" id="avatar3" onclick="modificaAvatar(name);" hidden>
+				<input name="avatar4" type="button" value="" id="avatar4" onclick="modificaAvatar(name);" hidden>
+
+			</td>
+		</tr>
+		<tr>
+			<td class="campoFisso" >Nome:</td><td id="nome"></td>
+		</tr>
+		<tr align="left">
+			<td class="campoFisso">Cognome:</td><td id="cognome" align="left"></td>
+		</tr>
+		<tr align="left">
+			<td class="campoFisso">E-mail:</td><td id="e-mail" align="left"></td>
+		</tr>
+		<tr align="left">
+			<td class="campoFisso">Username:</td>
+			<td align="left">
+			<containerProfilo id="username"></containerProfilo>
+			<!--<input type="text" name="new_user" id="new_user" value="" hidden onchange="modificaUsername()">
+			<input type="button" id="mod_user" value="" ></td>-->
+		</tr>
+		<tr align="left">
+			<td class="campoFisso">Password:</td>
+			<td align="left">
+				<containerProfilo id="password"></containerProfilo>
+				<input type="text" name="new_pass" id="new_pass" value="" hidden onchange="modificaPasssword()">
+				<input type="button" id="mod_pass" value="">
+			</td>
+		</tr>
+		<tr align="left">
+			<td class="campoFisso">Telefono:</td>
+			<td align="left">
+				<containerProfilo id="telefono"></containerProfilo>
+				<input type="number" name="new_tel" id="new_tel" value="" hidden onchange="modificaTelefono()">
+				<input type="button" id="mod_tel" value="" ></td>
+			</td>
+		</tr>
+		<tr align="left">
+			<td class="campoFisso">Nazionalità:</td><td id="nazione" align="left"></td>
+		</tr>
+		<tr>
+			<td  colspan="2"><hr noshade=""></td>
+		</tr>
+		<tr>
+			<td class="campoFisso">Credito:</td><td id="credito" align="left"></td>
+		</tr>
+		<tr>
+			<td class="campoFisso">Vittorie(%):</td><td id="vittorie" align="left"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="button" id="delete" value="Delete Account"  onclick="rimuoviAccount();"></td>
+		</tr>
+
+	</table>
+
+	<br>
+	<br>
+
+</main>
+
+	<div id="sotto" align="center">
+	<a href="Avvertenze.html"> Avvertenze</a> |
+	<a href="Privacy.html"> Privacy</a> |
+	<a href="FormFeedback.html">Valuta il Sito</a>
+
+
+	</div>
+
+
+</body>
+
+</html>

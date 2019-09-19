@@ -1,0 +1,83 @@
+body{
+    margin:0;
+    padding:0;
+    color: #666;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 24px;
+    line-height:22px;
+    background-image: url("pay.jpg");
+    background-repeat: no-repeat;
+    background-size: 180%;
+}
+
+table {
+    list-style: square;
+    width: 25cm;
+    margin: 0 auto;
+    font-size: 25px;
+    margin-top: 3%;
+    border-radius: 16px;
+    box-shadow:0 0 8px rgba(0,0,0,0.5);
+
+    border-collapse: separate;
+    border-spacing: 5px;
+
+    background-color:#e3dfe2;
+    /*background-color: rgb(255, 210, 50);*/
+}
+
+#titoloTabella{
+    color: #1456A0;
+    font-size: 55px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#submit{
+    background-color: #1456A0;
+    border: 2px solid #e3dfe2;
+    color: #e3dfe2;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0;
+    height: 40px;
+    width: 120px;
+}
+
+/* Gestione Stelline */
+
+div ul
+{
+    margin: 0px;
+    padding: 0px;
+    height: 16px;
+    list-style: none;
+}
+div li
+{
+    width: 19px;
+    height: 16px;
+    display: block;
+    float: left;
+    background-image: url('star-off.jpeg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+div li.on
+{
+    background-image: url('star-on.jpeg');
+}
+div span.output
+{
+    color: #1456A0;
+    font-weight: bold;
+}
+
+#STAR_RATING1{
+    width: 230px;
+}
+
+th{
+    padding-left: 30px;
+}
+

@@ -1,0 +1,2 @@
+A causa di IndexedDB, il progetto non esegue correttamente registrazione e login sul Browser Mozilla FireFox, come già d'accordo con lei abbiamo utilizzato il Browser Chrome per testare il progetto.
+Per testare il progetto aprire il file Login.html in ProgettoLudopatici\NotLoggedIn.

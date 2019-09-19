@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="LogIn.css">
+    <link rel="stylesheet" href="Navigation%20Bar%20CSS.css">
+    <script type="text/javascript" language="JavaScript" src="GestioneDB.js"></script>
+    <script type="text/javascript" language="JavaScript" src="GestioneLogIn.js"></script>
+
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#img1").click(
+                function(){
+                    $('#overlay').fadeIn('fast');
+                    $('#imgov1').fadeIn('slow');
+                }
+            );
+            $("#img2").click(
+                function(){
+                    $('#overlay').fadeIn('fast');
+                    $('#imgov2').fadeIn('slow');
+                }
+            );
+            $("#img3").click(
+                function(){
+                    $('#overlay').fadeIn('fast');
+                    $('#imgov3').fadeIn('slow');
+                }
+            );
+
+            $("#overlay").click(
+                function(){
+                    $(this).fadeOut('fast');
+                    $('#imgov1').hide();
+                    $('#imgov2').hide();
+                    $('#imgov3').hide();
+                }
+            );
+        });
+
+    </script>
+
+</head>
+<body onload="onLoad();">
+    <!--NAVIGATIOBAR-->
+    <div id="barra">
+        <ul>
+            <li><a href="LogIn.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#profilo" class="dropbutton">Regolamento</a>
+                <div class="dropdown-content">
+                    <a href="ComeGiocare.html">ComeGiocare</a>
+                    <a href="TabVincite.html">Incasso Vincite</a>
+                </div>
+
+            <li><a href="StatisticheGioco.html">Statistiche</a></li>
+            <li><a href="TabContatti.html">Chi Siamo</a></li>
+        </ul>
+    </div>
+<!-- Top menu on small screens -->
+
+    <div id = "container" style="width: 1200px; margin: 0 auto; padding: 0;">
+        <div class="overlay" id="overlay" style="display:none;"></div><!--Overlay non toccare!-->
+        <div id = "imgov1" style = "display: none">
+            <img src="ScreenPlayLogIn.jpg">
+        </div>
+        <div align = 'center' id = "imgov2" style = "display: none">
+            <img src="Haivintoov.png">
+        </div>
+        <div id = "imgov3" style = "display: none">
+            <img src="Profiloov.png">
+        </div>
+    <div id = "global">
+        <div id = "form" align="center">
+            <form action="" method="post" name="logIn" onSubmit="return cercaPerLogIn();">
+                <img src="logo.png" style="margin-top: -15%">
+                <h1 style=" margin-top: 15% ; font-size: 36px">
+                    Entra e Gioca!
+                </h1>
+                <div id = "log">
+                    <p>
+                        <h3>Username:</h3>  <div><input type="text" name="username" maxlength="30" style="width: 210px; height: 25px" required></div>
+                    </p>
+                    <p>
+                        <h3>Password:</h3>  <div><input type="password" name="password" maxlength="30" style="width: 210px; height: 25px" required> </div>
+                    </p>
+                    <p>
+                        <button type="submit" id="invia"></button>
+                    </p>
+                </div>
+                <h3 style="margin-top: 10%; margin-left: 2%">
+                    Non sei ancora registrato? Clicca qui!
+                </h3>
+                <input type="button" id = "sign-in" onClick="signIn()">
+            </form>
+
+
+        </div>
+        <div id = "right-part">
+            <table cellspacing="0px" cellpadding="0px">
+                <tr>
+                    <td id = "t-id">
+                        <h3 align="center" style="color: #1456a0">10 & Lotto</h3>
+                        <h5 style="margin-left: 4%">Si tratta dell'ultimo sistema di gioco si scommesse online,
+                        l'ultimo stadio d'evoluzione dell'ormai antiquato gioco del SuperEnalotto!<br>
+                        Gioca quando vuoi al 10 e Lotto, vinci fantastici montepremi e
+                        divertiti ad indovinare tutti i tuoi numeri scelti! Puoi giocare senza alcun limite di attesa.
+                        </h5>
+                        <h6 style="margin-left: 4%">
+                            Il gioco è vietato ai minori di 18 anni e vi invitiamo a giocare sempre responsabilmente
+                            e (soprattutto) intelligentemente.
+                        </h6>
+                    </td>
+                    <td rowspan="2" align="center" id = "screen" valign="top">
+                        <h4 style="color: #1456a0">Valutazione sito:</h4>
+                        <div>
+                            <h4 id="numero"></h4>
+                        </div>
+                        <hr>
+                        <h4 style="color: #1456a0">
+                            ScreenShot del GamePlay
+                        </h4>
+                        <img src="ScreenPlayLogInPiccola.jpg" id = "img1">
+                        <hr>
+                        <img src="Haivintoimg.png" id="img2">
+                        <hr>
+                        <img src="Profiloimg.png" id = "img3">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <hr>
+                        <ul id = "ul-login">
+                            <li>
+                                Interfacciati con un design grafico semplice ed efficace, partecipa vivamente al gioco scegliendo i tuoi numeri, <br>
+                                selezionando la tua puntata ed estraendo i numeri vincenti!
+                                <br>
+                                <br>
+                            </li>
+                            <li>
+                                Scommetti, con un solo credito in più, il numero GOLD! Con esso potrai moltiplicare la tua vincita<br>
+                                e guadagnare anche indovinando un solo numero!
+                                <br>
+                                <br>
+                            </li>
+                            <li>
+                                Consulta l'area del tuo profilo cui puoi accedere tramite la barra in alto, rileggi le tue statistiche,<br>
+                                modifica il tuo account ed il tuo avatar!
+                                <br>
+                                <br>
+                            </li>
+                            <li>
+                                Inoltre non perderti l'occasione di poter monitorare numeri ritardatari e numeri frequenti<br>
+                                ed essere sempre pronto e aggiornato su quali numeri scommettere!
+                                <br><br>
+                            </li>
+                            <li>
+                                Nell'area Regolamento puoi trovare le istruzioni per giocare e le tabelle con tutti gli incassi possibili in caso di vittoria.
+                                <br><br>
+                            </li>
+
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+<footer>
+    <div id="sotto" align="center">
+        <a href="Avvertenze.html">Avvertenze</a> |
+        <a href="Privacy.html"> Privacy</a>
+    </div>
+</footer>
+
+</body>
+</html>
